@@ -1,0 +1,14 @@
+{
+    "name": "jdbc_source_mysql_02",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+        "connection.url": "jdbc:mysql://mysql:3306/inventory",
+        "connection.user": "root",
+        "connection.password": "debezium",
+        "topic.prefix": "mysql-02-",
+        "mode":"bulk",
+     "poll.interval.ms": 3600000,
+ "catalog.pattern": "inventory",
+ "table.whitelist": "addresses,customers"
+ }
+}

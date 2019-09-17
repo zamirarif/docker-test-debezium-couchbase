@@ -1,0 +1,15 @@
+{
+    "name": "jdbc_sink_mysql_employees-bulk",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+        "connection.url": "jdbc:mysql://mysql:3306/employees",
+        "connection.user": "root",
+        "connection.password": "debezium",
+        "topics": "mysql-01-employees",
+        "mode":"bulk",
+        "table.name.format": "employees_sink",
+     "poll.interval.ms": 3600000,
+ "catalog.pattern": "employees",
+ "table.whitelist": "employees_sink"
+ }
+}

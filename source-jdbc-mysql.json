@@ -1,0 +1,11 @@
+{
+    "name": "jdbc_source_mysql_01",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+        "connection.url": "jdbc:mysql://mysql:3306/employees",
+        "connection.user": "root",
+        "connection.password": "debezium",
+        "topic.prefix": "mysql-01-",
+        "mode":"bulk"
+    }
+}

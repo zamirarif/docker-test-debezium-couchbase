@@ -191,6 +191,7 @@ services:
     container_name: mysql
     ports:
      - 3306:3306
+     - 8080:28080
     environment:
      - MYSQL_ROOT_PASSWORD=debezium
      - MYSQL_USER=mysqluser
@@ -202,3 +203,14 @@ services:
     ports:
      - 8091-8094:8091-8094
      - 11210:11210
+  appserver:
+    image: zamirarif/appserver:latest
+    build:
+      context: .
+      dockerfile: Dockerfileappserver
+    hostname: appserver
+    container_name: appserver
+    ports: 
+    - 38080:38080
+    - 48080:48080
+    command: tail -F anything

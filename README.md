@@ -3,4 +3,6 @@ I have assembled a docker compose file with Confluent enterprise, mysql, couchba
 
 Please follow the instruction in blog to spin and test the debezium connector. 
 
+https://www.linkedin.com/pulse/deploying-debezium-mysql-sink-connector-using-confluent-zamir-arif/?published=t
+
 
